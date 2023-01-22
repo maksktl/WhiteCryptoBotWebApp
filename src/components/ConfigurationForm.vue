@@ -60,7 +60,7 @@
               </a-button-group>
             </a-form-item>
             <a-form-item>
-              <a-button type="primary" @click="saveConfiguration">💾 Сохранить конфигурацию</a-button>
+              <a-button class="tg-button" type="primary" @click="saveConfiguration">💾 Сохранить конфигурацию</a-button>
             </a-form-item>
           </a-form>
         </a-card>
@@ -156,6 +156,14 @@ export default {
 .ant-form {
   width: 80%;
   background: var(--tg-theme-bg-color);
+}
+.tg-button {
+  padding: 10px 15px;
+  background: var(--tg-theme-button-color);
+  color: var(--tg-theme-text-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 </style>
