@@ -20,7 +20,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--tg-theme-text-color);
-  background: var(--tg-theme-bg-color);
+  background: #222;
   margin-top: 60px;
 }
 </style>
