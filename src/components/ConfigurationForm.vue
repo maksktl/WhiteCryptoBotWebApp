@@ -5,7 +5,7 @@
         <a-card>
           <a-form class="configuration_form">
             <a-form-item>
-              <h3>💰 Фиат</h3>
+              <h3 style="color: var(--tg-theme-text-color)">💰 Фиат</h3>
               <a-select v-model="selectedCurrency" style="width: 100px">
                 <a-select-option v-for="currency in currencies" :key="currency.value" :value="currency.value">
                   {{ currency.label }}
@@ -13,7 +13,7 @@
               </a-select>
             </a-form-item>
             <a-form-item>
-              <h3>💼 Актив</h3>
+              <h3 style="color: var(--tg-theme-text-color)">💼 Актив</h3>
               <a-select v-model="selectedAsset" style="width: 100px">
                 <a-select-option v-for="asset in assets" :key="asset.value" :value="asset.value">
                   {{ asset.label }}
@@ -21,11 +21,11 @@
               </a-select>
             </a-form-item>
             <a-form-item>
-              <h3>💸 Депозит</h3>
+              <h3 style="color: var(--tg-theme-text-color)">💸 Депозит</h3>
               <a-input-number v-model="deposit" style="width: 100px" :min="0" placeholder="💸 Депозит"></a-input-number>
             </a-form-item>
             <a-divider style="height: 2px; background-color: #222" />
-            <h2>💱 Биржа 1</h2>
+            <h2 style="color: var(--tg-theme-text-color)">💱 Биржа 1</h2>
             <a-card>
               <a-button v-for="exchange in exchanges" :key="exchange.value" :value="exchange.value"
                         @click="handleSelectExchange1(exchange)"
@@ -33,7 +33,7 @@
                 {{ exchange.label }}
               </a-button>
             </a-card>
-            <h2>💱 Биржа 2</h2>
+            <h2 style="color: var(--tg-theme-text-color)">💱 Биржа 2</h2>
             <a-card>
               <a-button v-for="exchange in exchanges" :key="exchange.value" :value="exchange.value"
                         @click="handleSelectExchange2(exchange)"
@@ -43,7 +43,7 @@
             </a-card>
             <a-divider style="height: 2px; background-color: #222" />
             <a-form-item>
-              <h2>📈 Стратегия</h2>
+              <h2 style="color: var(--tg-theme-text-color)">📈 Стратегия</h2>
               <a-select v-model="selectedStrategy" style="width: 200px">
                 <a-select-option v-for="strategy in strategies" :key="strategy.value" :value="strategy.value">
                   {{ strategy.label }}
@@ -51,7 +51,7 @@
               </a-select>
             </a-form-item>
             <a-form-item>
-              <h2>💳 Метод оплаты</h2>
+              <h2 style="color: var(--tg-theme-text-color)">💳 Метод оплаты</h2>
               <a-button-group>
                 <a-button v-for="method in paymentMethods" :key="method.value"
                           :type="selectedPaymentMethods.includes(method.value) ? 'primary' : 'danger'"
@@ -155,6 +155,7 @@ export default {
 <style>
 .ant-form {
   width: 80%;
+  background: var(--tg-theme-bg-color);
 }
 
 </style>
